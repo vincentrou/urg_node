@@ -9,7 +9,7 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find urg_node)/urdf/hokuyo_urg_04lx_ug01_laser.gazebo.xacro" />
+  <xacro:include filename="$(find urg_description)/urdf/hokuyo_urg_04lx_ug01_laser.gazebo.xacro" />
 
   <xacro:macro name="hokuyo_urg_04lx_ug01_laser" params="name parent *origin ros_topic update_rate min_angle max_angle">
 
@@ -24,7 +24,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://urg_node/meshes/hokuyo_urg_04lx_ug01.stl"/>
+          <mesh filename="package://urg_description/meshes/hokuyo_urg_04lx_ug01.stl"/>
         </geometry>
         <material name="DarkGrey">
           <color rgba="0.2 0.2 0.2 1.0"/>
