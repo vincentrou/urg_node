@@ -43,17 +43,6 @@ target_link_libraries(urg_node urg_c_wrapper ${catkin_LIBRARIES})
 add_executable(getID src/getID.cpp)
 target_link_libraries(getID urg_c_wrapper ${catkin_LIBRARIES})
 
-#Add all files in subdirectories of the project in
-# a dummy_target so qtcreator have access to all files
-FILE(GLOB children ${CMAKE_SOURCE_DIR}/*)
-FOREACH(child ${children})
-  IF(IS_DIRECTORY ${child})
-    file(GLOB_RECURSE dir_files "${child}/*")
-    LIST(APPEND extra_files ${dir_files})
-  ENDIF()
-ENDFOREACH()
-add_custom_target(dummy_target SOURCES ${extra_files})
-
 #############
 ## Install ##
 #############
