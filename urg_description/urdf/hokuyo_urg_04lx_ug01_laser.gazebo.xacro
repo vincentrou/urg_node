@@ -24,10 +24,10 @@
           <scan>
             <horizontal>
               <!-- 683 steps in 240deg fov -->
-              <samples>${683*(max_angle - min_angle)/(240.0 * deg_to_rad)}</samples>
+              <samples>${683*(max_angle*deg_to_rad - min_angle*deg_to_rad)/(240.0 * deg_to_rad)}</samples>
               <resolution>1</resolution> <!-- not the sensor resolution; just 1 -->
-              <min_angle>${min_angle}</min_angle>
-              <max_angle>${max_angle}</max_angle>
+              <min_angle>${min_angle* deg_to_rad}</min_angle>
+              <max_angle>${max_angle* deg_to_rad}</max_angle>
             </horizontal>
           </scan>
           <range>
